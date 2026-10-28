@@ -4,6 +4,12 @@ A veterinary patient management application developed with Vue 3, JavaScript, Vi
 
 This project was built while following the **Vue.js course by Código con Juan**. Its purpose is to practice Vue 3 fundamentals, component communication, reactive state management, form validation, and browser data persistence.
 
+## Live Demo
+
+Try the application here: [Veterinary Patient Management – Vue 3](https://veterinary-patients-vue.netlify.app/)
+
+The application is deployed on Netlify and connected to GitHub for automatic deployment when changes are pushed to the `main` branch.
+
 ## Features
 
 - Register new veterinary patients.
@@ -35,6 +41,18 @@ This project was built while following the **Vue.js course by Código con Juan**
 **Data Persistence:** Used `watch()` with `{ deep: true }` to detect changes and automatically save patients to localStorage. Used `onMounted()` and `JSON.parse()` to restore saved information when the application loads.
 
 **JavaScript Methods:** Practiced `push()`, `findIndex()`, `filter()`, `Object.assign()`, and the spread operator (`...`).
+
+### Data Persistence
+
+The application uses the browser's `localStorage` to save patient records without requiring a backend or database.
+
+- `watch()` monitors changes to the patients array.
+- `JSON.stringify()` converts patient data into a JSON string before saving it.
+- `localStorage.setItem()` stores the data in the browser.
+- `onMounted()` retrieves saved records when the application loads.
+- `JSON.parse()` converts the stored JSON string back into JavaScript objects.
+
+**Important:** Patient records are stored locally in each visitor's browser, not in a shared database. Each visitor has their own independent records. Data is not synchronized between users, browsers, or devices.
 
 ## Project Structure
 
@@ -103,6 +121,10 @@ Developed as a learning project following the Vue.js course by **Código con Jua
 
 ## Project Status
 
-Learning project with functional patient registration, editing, deletion, and localStorage persistence.
+Deployed and functional.
 
-Patient information is stored locally in the browser. This application is intended for educational purposes, not for managing real veterinary medical records.
+The application supports patient registration, editing, deletion, form validation, and data persistence using localStorage.
+
+Built with Vue 3, Vite, and Tailwind CSS as a learning project following the Vue.js course by Código con Juan.
+
+Note: This application is intended for educational and portfolio purposes. Patient information is stored locally in the browser and should not be used to manage real veterinary medical records.
